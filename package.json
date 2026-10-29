@@ -11,10 +11,8 @@
     "url": "https://github.com/joliss/node-fixturify"
   },
   "dependencies": {
-    "@types/fs-extra": "^9.0.13",
     "@types/minimatch": "^3.0.3",
     "@types/rimraf": "^3.0.2",
-    "fs-extra": "^10.1.0",
     "matcher-collection": "^2.0.1",
     "walk-sync": "^3.0.0"
   },

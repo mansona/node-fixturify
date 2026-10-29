@@ -1,4 +1,4 @@
-import fs from 'fs-extra';
+import fs from 'node:fs';
 import { IMinimatch } from 'minimatch';
 import walkSync from 'walk-sync';
 
@@ -76,7 +76,7 @@ export function writeSync(dir: string, obj: DirJSON) {
   if ('object' !== typeof obj && obj !== null) {
     throw new TypeError('writeSync second argument must be an object');
   }
-  fs.mkdirpSync(dir);
+  fs.mkdirSync(dir, { recursive: true });
 
   for (let entry in obj) {
     if (obj.hasOwnProperty(entry)) {
@@ -101,13 +101,13 @@ export function writeSync(dir: string, obj: DirJSON) {
 
       if (typeof value === 'string') {
         if (stat && stat.isDirectory()) {
-          fs.removeSync(fullPath);
+          fs.rmSync(fullPath, {recursive: true, force: true});
         }
 
         fs.writeFileSync(fullPath, value, 'utf8');
       } else if (typeof value === 'object') {
         if (value === null) {
-          fs.removeSync(fullPath);
+          fs.rmSync(fullPath, {recursive: true, force: true});
         } else {
           try {
             if (stat && stat.isFile()) {
