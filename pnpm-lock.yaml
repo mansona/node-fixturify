@@ -166,12 +166,6 @@ importers:
 
   .:
     dependencies:
-      '@types/minimatch':
-        specifier: ^3.0.3
-        version: 3.0.5
-      '@types/rimraf':
-        specifier: ^3.0.2
-        version: 3.0.2
       matcher-collection:
         specifier: ^2.0.1
         version: 2.0.1
@@ -179,9 +173,15 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
     devDependencies:
+      '@types/minimatch':
+        specifier: ^3.0.3
+        version: 3.0.5
       '@types/node':
         specifier: ^18.11.7
         version: 18.19.130
+      '@types/rimraf':
+        specifier: ^3.0.2
+        version: 3.0.2
       '@types/tap':
         specifier: ^15.0.0
         version: 15.0.12

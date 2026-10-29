@@ -11,12 +11,12 @@
     "url": "https://github.com/joliss/node-fixturify"
   },
   "dependencies": {
-    "@types/minimatch": "^3.0.3",
-    "@types/rimraf": "^3.0.2",
     "matcher-collection": "^2.0.1",
     "walk-sync": "^3.0.0"
   },
   "devDependencies": {
+    "@types/minimatch": "^3.0.3",
+    "@types/rimraf": "^3.0.2",
     "@types/node": "^18.11.7",
     "@types/tap": "^15.0.0",
     "rimraf": "^3.0.2",
